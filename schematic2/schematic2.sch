@@ -560,12 +560,12 @@ $EndComp
 $Comp
 L Connector:Barrel_Jack J1
 U 1 1 5B44C5FE
-P 1350 1750
-F 0 "J1" H 1350 1960 50  0000 C CNN
-F 1 "Barrel_Jack" H 1350 1550 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1400 1710 50  0001 C CNN
-F 3 "~" H 1400 1710 50  0001 C CNN
-	1    1350 1750
+P 800 1750
+F 0 "J1" H 800 1960 50  0000 C CNN
+F 1 "Barrel_Jack" H 800 1550 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 850 1710 50  0001 C CNN
+F 3 "~" H 850 1710 50  0001 C CNN
+	1    800  1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -603,8 +603,6 @@ Wire Wire Line
 	1650 1650 1800 1650
 Wire Wire Line
 	1800 1650 1800 1350
-Wire Wire Line
-	1650 1850 1700 1850
 Wire Wire Line
 	1700 1850 1700 2050
 Wire Wire Line
@@ -956,4 +954,19 @@ Text Notes 2300 1550 0    50   ~ 0
 R3 SHOULD BE ADJUSTED TO GIVE\nAPPROPRIATE CHARGING CURRENT\nFOR THE BATTERIES USED
 Text Notes 9300 3250 0    50   ~ 0
 JUMPER FOR NO AUTO\nPOWER OFF.  STAY ON\nUNTIL BATTERY FLAT
+$Comp
+L Device:Polyfuse F1
+U 1 1 5B476954
+P 1500 1650
+F 0 "F1" V 1400 1650 50  0000 C CNN
+F 1 "Polyfuse" V 1600 1650 50  0000 C CNN
+F 2 "Fuse:Fuse_2816_7142Metric_Pad3.20x4.45mm_HandSolder" H 1550 1450 50  0001 L CNN
+F 3 "~" H 1500 1650 50  0001 C CNN
+	1    1500 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 1650 1350 1650
+Wire Wire Line
+	1100 1850 1700 1850
 $EndSCHEMATC
