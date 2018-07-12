@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date "15 nov 2012"
 Rev ""
@@ -14,148 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:+5V #PWR04
-U 1 1 580C1B61
-P -2450 2650
-F 0 "#PWR04" H -2450 2500 50  0001 C CNN
-F 1 "+5V" H -2450 2790 50  0000 C CNN
-F 2 "" H -2450 2650 50  0000 C CNN
-F 3 "" H -2450 2650 50  0000 C CNN
-	1    -2450 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-2450 2650 -2450 2800
-Wire Wire Line
-	-2450 2800 -2650 2800
-Connection ~ -2450 2800
-$Comp
-L power:GND #PWR03
-U 1 1 580C1D11
-P -2550 4850
-F 0 "#PWR03" H -2550 4600 50  0001 C CNN
-F 1 "GND" H -2550 4700 50  0000 C CNN
-F 2 "" H -2550 4850 50  0000 C CNN
-F 3 "" H -2550 4850 50  0000 C CNN
-	1    -2550 4850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-2550 4400 -2650 4400
-Wire Wire Line
-	-2550 4200 -2650 4200
-Wire Wire Line
-	-2550 3700 -2650 3700
-Wire Wire Line
-	-2550 3400 -2650 3400
-$Comp
-L power:GND #PWR02
-U 1 1 580C1E01
-P -3250 4850
-F 0 "#PWR02" H -3250 4600 50  0001 C CNN
-F 1 "GND" H -3250 4700 50  0000 C CNN
-F 2 "" H -3250 4850 50  0000 C CNN
-F 3 "" H -3250 4850 50  0000 C CNN
-	1    -3250 4850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-3250 4700 -3150 4700
-Connection ~ -3250 4700
-$Comp
-L power:+3.3V #PWR01
-U 1 1 580C1BC1
-P -3350 2650
-F 0 "#PWR01" H -3350 2500 50  0001 C CNN
-F 1 "+3.3V" H -3350 2790 50  0000 C CNN
-F 2 "" H -3350 2650 50  0000 C CNN
-F 3 "" H -3350 2650 50  0000 C CNN
-	1    -3350 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-3250 3200 -3150 3200
-Wire Wire Line
-	-4300 3100 -3150 3100
-Wire Wire Line
-	-3150 3300 -4300 3300
-Wire Wire Line
-	-4300 3400 -3150 3400
-Wire Wire Line
-	-3150 3700 -4300 3700
-Wire Wire Line
-	-4300 3800 -3150 3800
-Wire Wire Line
-	-4300 3900 -3150 3900
-Wire Wire Line
-	-3150 4100 -4300 4100
-Wire Wire Line
-	-4300 4200 -3150 4200
-Wire Wire Line
-	-4300 4300 -3150 4300
-Wire Wire Line
-	-3150 4400 -4300 4400
-Wire Wire Line
-	-4300 4500 -3150 4500
-Wire Wire Line
-	-4300 4600 -3150 4600
-Text Label -4300 2900 0    50   ~ 0
-GPIO2(SDA1)
-Text Label -4300 3000 0    50   ~ 0
-GPIO3(SCL1)
-Text Label -4300 3100 0    50   ~ 0
-GPIO4(GCLK)
-Text Label -4300 3300 0    50   ~ 0
-GPIO17(GEN0)
-Text Label -4300 3400 0    50   ~ 0
-GPIO27(GEN2)
-Text Label -4300 3500 0    50   ~ 0
-GPIO22(GEN3)
-Text Label -4300 3700 0    50   ~ 0
-GPIO10(SPI0_MOSI)
-Text Label -4300 3800 0    50   ~ 0
-GPIO9(SPI0_MISO)
-Text Label -4300 3900 0    50   ~ 0
-GPIO11(SPI0_SCK)
-Text Label -4300 4100 0    50   ~ 0
-ID_SD
-Text Label -4300 4200 0    50   ~ 0
-GPIO5
-Text Label -4300 4300 0    50   ~ 0
-GPIO6
-Text Label -4300 4400 0    50   ~ 0
-GPIO13(PWM1)
-Text Label -4300 4500 0    50   ~ 0
-GPIO19(SPI1_MISO)
-Text Label -4300 4600 0    50   ~ 0
-GPIO26
-Text Label -1600 4600 2    50   ~ 0
-GPIO20(SPI1_MOSI)
-Text Label -1600 4500 2    50   ~ 0
-GPIO16
-Text Label -1600 4300 2    50   ~ 0
-GPIO12(PWM0)
-Text Label -1600 4100 2    50   ~ 0
-ID_SC
-Text Label -1600 4000 2    50   ~ 0
-GPIO7(SPI1_CE_N)
-Text Label -1600 3900 2    50   ~ 0
-GPIO8(SPI0_CE_N)
-Text Label -1600 3800 2    50   ~ 0
-GPIO25(GEN6)
-Text Label -1600 3600 2    50   ~ 0
-GPIO24(GEN5)
-Text Label -1600 3500 2    50   ~ 0
-GPIO23(GEN4)
-Text Label -1600 3300 2    50   ~ 0
-GPIO18(GEN1)(PWM0)
-Text Label -1600 3200 2    50   ~ 0
-GPIO15(RXD0)
-Text Label -1600 3100 2    50   ~ 0
-GPIO14(TXD0)
-Wire Wire Line
-	-2550 3000 -2650 3000
 Text Notes 650  7600 0    50   ~ 0
 ID_SD and ID_SC PINS:\nThese pins are reserved for HAT ID EEPROM.\n\nAt boot time this I2C interface will be\ninterrogated to look for an EEPROM\nthat identifes the attached board and\nallows automagic setup of the GPIOs\n(and optionally, Linux drivers).\n\nDO NOT USE these pins for anything other\nthan attaching an I2C ID EEPROM. Leave\nunconnected if ID EEPROM not required.
 $Comp
@@ -204,23 +62,6 @@ F 3 "" H 3450 7400 60  0001 C CNN
 $EndComp
 Text Notes 3000 7050 0    50   ~ 0
 Mounting Holes
-$Comp
-L Connector_Generic:Conn_02x20_Odd_Even P1
-U 1 1 59AD464A
-P -2950 3700
-F 0 "P1" H -2900 4817 50  0000 C CNN
-F 1 "Conn_02x20_Odd_Even" H -2900 4726 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H -7800 2750 50  0001 C CNN
-F 3 "" H -7800 2750 50  0001 C CNN
-	1    -2950 3700
-	1    0    0    -1  
-$EndComp
-Text Label -1600 4700 2    50   ~ 0
-GPIO21(SPI1_SCK)
-Wire Wire Line
-	-2450 2800 -2450 2900
-Wire Wire Line
-	-3250 4700 -3250 4850
 $Comp
 L Mikes:TIANBO_HJR_1-2C K1
 U 1 1 5B3B3F17
@@ -509,41 +350,6 @@ F 3 "" H 9900 2650 50  0001 C CNN
 $EndComp
 Text GLabel 5500 4800 2    45   Output ~ 0
 POWER_FAIL
-Wire Wire Line
-	-2650 2900 -2450 2900
-Wire Wire Line
-	-2650 4500 -1600 4500
-Wire Wire Line
-	-2650 4600 -1600 4600
-Wire Wire Line
-	-2650 4100 -1600 4100
-Wire Wire Line
-	-2650 3800 -1600 3800
-Wire Wire Line
-	-2650 3900 -1600 3900
-Wire Wire Line
-	-2650 3600 -1600 3600
-Wire Wire Line
-	-2650 3200 -1600 3200
-Wire Wire Line
-	-2650 3300 -1600 3300
-Wire Wire Line
-	-2650 3100 -1600 3100
-Wire Wire Line
-	-2650 4300 -1600 4300
-Wire Wire Line
-	-2650 4700 -1600 4700
-$Comp
-L Mikes:buck U1
-U 1 1 5B42668C
-P 7150 1750
-F 0 "U1" H 7050 1750 50  0000 C CNN
-F 1 "buck" H 7100 1650 50  0000 C CNN
-F 2 "Mikee:BUCK_MODULE_5V" H 6950 1650 50  0001 C CNN
-F 3 "" H 7150 1750 50  0001 C CNN
-	1    7150 1750
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5B44C382
@@ -566,37 +372,6 @@ F 3 "~" H 850 1710 50  0001 C CNN
 	1    800  1750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	-3350 2650 -3350 2800
-Wire Wire Line
-	-2550 3000 -2550 3400
-Wire Wire Line
-	-2550 3400 -2550 3700
-Connection ~ -2550 3400
-Wire Wire Line
-	-2550 3700 -2550 4200
-Connection ~ -2550 3700
-Wire Wire Line
-	-2550 4200 -2550 4400
-Connection ~ -2550 4200
-Wire Wire Line
-	-3250 3200 -3250 4000
-Wire Wire Line
-	-4300 3500 -3150 3500
-Wire Wire Line
-	-2650 4000 -1600 4000
-Wire Wire Line
-	-3150 4000 -3250 4000
-Connection ~ -3250 4000
-Wire Wire Line
-	-3250 4000 -3250 4700
-Wire Wire Line
-	-2550 4400 -2550 4850
-Connection ~ -2550 4400
-Wire Wire Line
-	-2650 3500 -1600 3500
-Text GLabel -4300 3500 0    50   Input ~ 0
-POWER_FAIL
 Wire Wire Line
 	1650 1650 1800 1650
 Wire Wire Line
@@ -661,8 +436,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 2450 6300 1650
 Connection ~ 6300 1650
-Wire Wire Line
-	6300 1650 6700 1650
 $Comp
 L power:GND #PWR09
 U 1 1 5B4DB757
@@ -674,25 +447,6 @@ F 3 "" H 6700 2050 50  0001 C CNN
 	1    6700 2050
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR010
-U 1 1 5B4DB7B0
-P 7500 2050
-F 0 "#PWR010" H 7500 1800 50  0001 C CNN
-F 1 "GND" H 7500 1900 50  0000 C CNN
-F 2 "" H 7500 2050 50  0001 C CNN
-F 3 "" H 7500 2050 50  0001 C CNN
-	1    7500 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 1950 7500 1950
-Wire Wire Line
-	7500 1950 7500 2050
-Wire Wire Line
-	6700 1950 6700 2050
-Wire Wire Line
-	7450 1650 7700 1650
 Wire Wire Line
 	7700 1650 7700 2450
 Wire Wire Line
@@ -911,8 +665,6 @@ Wire Wire Line
 	9150 4250 9500 4250
 Text GLabel 10550 4250 2    45   Input ~ 0
 PI_P_SIG
-Text GLabel -4300 3400 0    45   Output ~ 0
-PI_P_SIG
 Wire Wire Line
 	7500 6050 8200 6050
 Wire Wire Line
@@ -961,210 +713,260 @@ Wire Wire Line
 Wire Wire Line
 	7100 3100 7100 3050
 Connection ~ 6700 3100
-$Comp
-L Timer_RTC:DS3231M U2
-U 1 1 5B4C83EB
-P 4850 6950
-F 0 "U2" H 4550 7300 50  0000 R CNN
-F 1 "DS3231M" H 5250 7300 50  0000 R CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 4850 6350 50  0001 C CNN
-F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 5120 7000 50  0001 C CNN
-	1    4850 6950
-	1    0    0    -1  
-$EndComp
+$Sheet
+S 6850 1550 500  350 
+U 5B480DB5
+F0 "Sheet5B480DB4" 50
+F1 "buck.sch" 50
+F2 "Vin" I L 6850 1650 40 
+F3 "GND" I L 6850 1800 40 
+F4 "Vout" I R 7350 1650 40 
+$EndSheet
 Wire Wire Line
-	-3150 2800 -3350 2800
+	6850 1800 6700 1800
 Wire Wire Line
-	-3150 3000 -4300 3000
+	6700 1800 6700 2050
 Wire Wire Line
-	-4300 2900 -3150 2900
-$Comp
-L power:GND #PWR0101
-U 1 1 5B4D8BAD
-P 4850 7550
-F 0 "#PWR0101" H 4850 7300 50  0001 C CNN
-F 1 "GND" H 4850 7400 50  0000 C CNN
-F 2 "" H 4850 7550 50  0001 C CNN
-F 3 "" H 4850 7550 50  0001 C CNN
-	1    4850 7550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0102
-U 1 1 5B4D8F39
-P 4750 6150
-F 0 "#PWR0102" H 4750 6000 50  0001 C CNN
-F 1 "+3.3V" H 4750 6290 50  0000 C CNN
-F 2 "" H 4750 6150 50  0000 C CNN
-F 3 "" H 4750 6150 50  0000 C CNN
-	1    4750 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R13
-U 1 1 5B4D9250
-P 4200 6600
-F 0 "R13" V 4280 6600 50  0000 C CNN
-F 1 "4K7" V 4200 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4130 6600 50  0001 C CNN
-F 3 "" H 4200 6600 50  0001 C CNN
-	1    4200 6600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 5B4D930E
-P 4100 6600
-F 0 "R12" V 4180 6600 50  0000 C CNN
-F 1 "4K7" V 4100 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4030 6600 50  0001 C CNN
-F 3 "" H 4100 6600 50  0001 C CNN
-	1    4100 6600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5B4DEABF
-P 5450 6600
-F 0 "R15" V 5530 6600 50  0000 C CNN
-F 1 "4K7" V 5450 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5380 6600 50  0001 C CNN
-F 3 "" H 5450 6600 50  0001 C CNN
-	1    5450 6600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R16
-U 1 1 5B4DEB5B
-P 5550 6600
-F 0 "R16" V 5630 6600 50  0000 C CNN
-F 1 "4K7" V 5550 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5480 6600 50  0001 C CNN
-F 3 "" H 5550 6600 50  0001 C CNN
-	1    5550 6600
-	-1   0    0    1   
-$EndComp
+	6300 1650 6850 1650
 Wire Wire Line
-	4750 6150 4750 6250
-Wire Wire Line
-	4750 6250 4300 6250
-Wire Wire Line
-	4200 6250 4200 6450
-Wire Wire Line
-	4200 6250 4100 6250
-Wire Wire Line
-	4100 6250 4100 6450
-Connection ~ 4200 6250
-Wire Wire Line
-	4200 6750 4350 6750
-Wire Wire Line
-	4350 6850 4100 6850
-Wire Wire Line
-	4100 6850 4100 6750
-Wire Wire Line
-	5350 6750 5450 6750
-Wire Wire Line
-	5550 6750 5550 7050
-Wire Wire Line
-	5550 7050 5350 7050
-Wire Wire Line
-	4750 6250 5450 6250
-Wire Wire Line
-	5450 6250 5450 6450
-Connection ~ 4750 6250
-Wire Wire Line
-	5450 6250 5550 6250
-Wire Wire Line
-	5550 6250 5550 6450
-Connection ~ 5450 6250
-Wire Wire Line
-	4850 7350 4850 7450
-Wire Wire Line
-	4750 6550 4750 6250
-$Comp
-L Device:R R14
-U 1 1 5B51E526
-P 4300 6550
-F 0 "R14" V 4380 6550 50  0000 C CNN
-F 1 "4K7" V 4300 6550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4230 6550 50  0001 C CNN
-F 3 "" H 4300 6550 50  0001 C CNN
-	1    4300 6550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4300 6400 4300 6250
-Connection ~ 4300 6250
-Wire Wire Line
-	4300 6250 4200 6250
-Wire Wire Line
-	4300 6700 4300 7150
-Wire Wire Line
-	4300 7150 4350 7150
-$Comp
-L Device:C_Small C1
-U 1 1 5B52CF31
-P 3900 6550
-F 0 "C1" H 3910 6620 50  0000 L CNN
-F 1 "C_Small" H 3910 6470 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 3900 6550 50  0001 C CNN
-F 3 "~" H 3900 6550 50  0001 C CNN
-	1    3900 6550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 6250 3900 6250
-Wire Wire Line
-	3900 6250 3900 6450
-Connection ~ 4100 6250
-Wire Wire Line
-	3900 7450 4850 7450
-Connection ~ 4850 7450
-Wire Wire Line
-	4850 7450 4850 7550
-Wire Wire Line
-	4100 6850 3750 6850
-Connection ~ 4100 6850
-Connection ~ 4200 6750
-Connection ~ 3900 6450
-Wire Wire Line
-	3900 6450 3900 6550
-Wire Wire Line
-	3900 6650 3900 7450
-Text GLabel 3750 6750 0    40   Input ~ 0
-SCL1
-Text GLabel 3750 6850 0    40   BiDi ~ 0
+	7350 1650 7700 1650
+Text GLabel -4300 2900 0    40   BiDi ~ 0
 SDA1
 Text GLabel -4300 3000 0    40   Input ~ 0
 SCL1
-Text GLabel -4300 2900 0    40   BiDi ~ 0
-SDA1
 Wire Wire Line
-	5950 6350 4850 6350
+	-4300 2900 -3150 2900
 Wire Wire Line
-	4850 6350 4850 6550
+	-3150 3000 -4300 3000
 Wire Wire Line
-	4850 7450 6250 7450
+	-3150 2800 -3350 2800
+Text GLabel -4300 3400 0    45   Output ~ 0
+PI_P_SIG
+Text GLabel -4300 3500 0    50   Input ~ 0
+POWER_FAIL
 Wire Wire Line
-	6250 7450 6250 6650
+	-2650 3500 -1600 3500
 Wire Wire Line
-	5850 3100 6550 3100
+	-3150 4000 -3250 4000
 Wire Wire Line
-	6550 3100 6550 6350
-Connection ~ 6550 3100
+	-2650 4000 -1600 4000
 Wire Wire Line
-	6550 3100 6700 3100
+	-4300 3500 -3150 3500
+Connection ~ -3250 4000
 Wire Wire Line
-	3750 6750 4200 6750
+	-3250 3200 -3250 4000
+Wire Wire Line
+	-3350 2650 -3350 2800
+Wire Wire Line
+	-2650 4700 -1600 4700
+Wire Wire Line
+	-2650 4300 -1600 4300
+Wire Wire Line
+	-2650 3100 -1600 3100
+Wire Wire Line
+	-2650 3300 -1600 3300
+Wire Wire Line
+	-2650 3200 -1600 3200
+Wire Wire Line
+	-2650 3600 -1600 3600
+Wire Wire Line
+	-2650 3900 -1600 3900
+Wire Wire Line
+	-2650 3800 -1600 3800
+Wire Wire Line
+	-2650 4100 -1600 4100
+Wire Wire Line
+	-2650 4600 -1600 4600
+Wire Wire Line
+	-2650 4500 -1600 4500
+Wire Wire Line
+	-2650 2900 -2450 2900
+Wire Wire Line
+	-2450 2800 -2450 2900
+Text Label -1600 4700 2    50   ~ 0
+GPIO21(SPI1_SCK)
 $Comp
-L Regulator_Linear:MCP1700-1202E_SOT89 U3
-U 1 1 5B47FA3C
-P 6250 6350
-F 0 "U3" H 6100 6475 50  0000 C CNN
-F 1 "MCP1700-1202E_SOT89" H 6250 6475 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-89-3" H 6250 6550 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826C.pdf" H 6250 6300 50  0001 C CNN
-	1    6250 6350
+L Connector_Generic:Conn_02x20_Odd_Even P1
+U 1 1 59AD464A
+P -2950 3700
+F 0 "P1" H -2900 4817 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H -2900 4726 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H -7800 2750 50  0001 C CNN
+F 3 "" H -7800 2750 50  0001 C CNN
+	1    -2950 3700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	-2550 3000 -2650 3000
+Text Label -1600 3100 2    50   ~ 0
+GPIO14(TXD0)
+Text Label -1600 3200 2    50   ~ 0
+GPIO15(RXD0)
+Text Label -1600 3300 2    50   ~ 0
+GPIO18(GEN1)(PWM0)
+Text Label -1600 3500 2    50   ~ 0
+GPIO23(GEN4)
+Text Label -1600 3600 2    50   ~ 0
+GPIO24(GEN5)
+Text Label -1600 3800 2    50   ~ 0
+GPIO25(GEN6)
+Text Label -1600 3900 2    50   ~ 0
+GPIO8(SPI0_CE_N)
+Text Label -1600 4000 2    50   ~ 0
+GPIO7(SPI1_CE_N)
+Text Label -1600 4100 2    50   ~ 0
+ID_SC
+Text Label -1600 4300 2    50   ~ 0
+GPIO12(PWM0)
+Text Label -1600 4500 2    50   ~ 0
+GPIO16
+Text Label -1600 4600 2    50   ~ 0
+GPIO20(SPI1_MOSI)
+Text Label -4300 4600 0    50   ~ 0
+GPIO26
+Text Label -4300 4500 0    50   ~ 0
+GPIO19(SPI1_MISO)
+Text Label -4300 4400 0    50   ~ 0
+GPIO13(PWM1)
+Text Label -4300 4300 0    50   ~ 0
+GPIO6
+Text Label -4300 4200 0    50   ~ 0
+GPIO5
+Text Label -4300 4100 0    50   ~ 0
+ID_SD
+Text Label -4300 3900 0    50   ~ 0
+GPIO11(SPI0_SCK)
+Text Label -4300 3800 0    50   ~ 0
+GPIO9(SPI0_MISO)
+Text Label -4300 3700 0    50   ~ 0
+GPIO10(SPI0_MOSI)
+Text Label -4300 3500 0    50   ~ 0
+GPIO22(GEN3)
+Text Label -4300 3400 0    50   ~ 0
+GPIO27(GEN2)
+Text Label -4300 3300 0    50   ~ 0
+GPIO17(GEN0)
+Text Label -4300 3100 0    50   ~ 0
+GPIO4(GCLK)
+Text Label -4300 3000 0    50   ~ 0
+GPIO3(SCL1)
+Text Label -4300 2900 0    50   ~ 0
+GPIO2(SDA1)
+Wire Wire Line
+	-4300 4600 -3150 4600
+Wire Wire Line
+	-4300 4500 -3150 4500
+Wire Wire Line
+	-3150 4400 -4300 4400
+Wire Wire Line
+	-4300 4300 -3150 4300
+Wire Wire Line
+	-4300 4200 -3150 4200
+Wire Wire Line
+	-3150 4100 -4300 4100
+Wire Wire Line
+	-4300 3900 -3150 3900
+Wire Wire Line
+	-4300 3800 -3150 3800
+Wire Wire Line
+	-3150 3700 -4300 3700
+Wire Wire Line
+	-4300 3400 -3150 3400
+Wire Wire Line
+	-3150 3300 -4300 3300
+Wire Wire Line
+	-4300 3100 -3150 3100
+Wire Wire Line
+	-3250 3200 -3150 3200
+$Comp
+L power:+3.3V #PWR01
+U 1 1 580C1BC1
+P -3350 2650
+F 0 "#PWR01" H -3350 2500 50  0001 C CNN
+F 1 "+3.3V" H -3350 2790 50  0000 C CNN
+F 2 "" H -3350 2650 50  0000 C CNN
+F 3 "" H -3350 2650 50  0000 C CNN
+	1    -3350 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-3250 4000 -3250 4700
+Wire Wire Line
+	-3250 4700 -3250 4850
+Connection ~ -3250 4700
+Wire Wire Line
+	-3250 4700 -3150 4700
+$Comp
+L power:GND #PWR02
+U 1 1 580C1E01
+P -3250 4850
+F 0 "#PWR02" H -3250 4600 50  0001 C CNN
+F 1 "GND" H -3250 4700 50  0000 C CNN
+F 2 "" H -3250 4850 50  0000 C CNN
+F 3 "" H -3250 4850 50  0000 C CNN
+	1    -3250 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-2550 3000 -2550 3400
+Connection ~ -2550 3400
+Wire Wire Line
+	-2550 3400 -2650 3400
+Wire Wire Line
+	-2550 3400 -2550 3700
+Connection ~ -2550 3700
+Wire Wire Line
+	-2550 3700 -2650 3700
+Wire Wire Line
+	-2550 3700 -2550 4200
+Connection ~ -2550 4200
+Wire Wire Line
+	-2550 4200 -2650 4200
+Wire Wire Line
+	-2550 4400 -2550 4850
+Wire Wire Line
+	-2550 4200 -2550 4400
+Connection ~ -2550 4400
+Wire Wire Line
+	-2550 4400 -2650 4400
+$Comp
+L power:GND #PWR03
+U 1 1 580C1D11
+P -2550 4850
+F 0 "#PWR03" H -2550 4600 50  0001 C CNN
+F 1 "GND" H -2550 4700 50  0000 C CNN
+F 2 "" H -2550 4850 50  0000 C CNN
+F 3 "" H -2550 4850 50  0000 C CNN
+	1    -2550 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-2450 2800 -2650 2800
+Connection ~ -2450 2800
+Wire Wire Line
+	-2450 2650 -2450 2800
+$Comp
+L power:+5V #PWR04
+U 1 1 580C1B61
+P -2450 2650
+F 0 "#PWR04" H -2450 2500 50  0001 C CNN
+F 1 "+5V" H -2450 2790 50  0000 C CNN
+F 2 "" H -2450 2650 50  0000 C CNN
+F 3 "" H -2450 2650 50  0000 C CNN
+	1    -2450 2650
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5200 6650 800  500 
+U 5B4BA298
+F0 "Sheet5B4BA297" 40
+F1 "clock.sch" 40
+F2 "V0" I R 6000 6800 40 
+F3 "GND" I R 6000 7050 40 
+F4 "V3v3" I L 5200 6800 40 
+F5 "SCL1" I L 5200 6950 40 
+F6 "SDA1" B L 5200 7050 40 
+$EndSheet
+Wire Wire Line
+	5850 3100 6700 3100
 $EndSCHEMATC
