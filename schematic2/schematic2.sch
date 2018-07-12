@@ -63,8 +63,6 @@ $EndComp
 Wire Wire Line
 	-3250 4700 -3150 4700
 Connection ~ -3250 4700
-Wire Wire Line
-	-3350 3600 -3150 3600
 $Comp
 L power:+3.3V #PWR01
 U 1 1 580C1BC1
@@ -237,12 +235,12 @@ $EndComp
 $Comp
 L Device:Battery BT1
 U 1 1 5B3B41CD
-P 5250 3500
-F 0 "BT1" H 5350 3600 50  0000 L CNN
-F 1 "6x AAA NiMh" H 5350 3500 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" V 5250 3560 50  0001 C CNN
-F 3 "" V 5250 3560 50  0001 C CNN
-	1    5250 3500
+P 5250 3750
+F 0 "BT1" H 5350 3850 50  0000 L CNN
+F 1 "3x AAA NiMh" H 5350 3750 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_2479_3xAAA" V 5250 3810 50  0001 C CNN
+F 3 "" V 5250 3810 50  0001 C CNN
+	1    5250 3750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -303,12 +301,12 @@ $EndComp
 $Comp
 L power:GND #PWR08
 U 1 1 5B3B8E03
-P 5250 3900
-F 0 "#PWR08" H 5250 3650 50  0001 C CNN
-F 1 "GND" H 5250 3750 50  0000 C CNN
-F 2 "" H 5250 3900 50  0001 C CNN
-F 3 "" H 5250 3900 50  0001 C CNN
-	1    5250 3900
+P 5250 4000
+F 0 "#PWR08" H 5250 3750 50  0001 C CNN
+F 1 "GND" H 5250 3850 50  0000 C CNN
+F 2 "" H 5250 4000 50  0001 C CNN
+F 3 "" H 5250 4000 50  0001 C CNN
+	1    5250 4000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -569,7 +567,7 @@ F 3 "~" H 850 1710 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	-3350 2650 -3350 3600
+	-3350 2650 -3350 2800
 Wire Wire Line
 	-2550 3000 -2550 3400
 Wire Wire Line
@@ -655,14 +653,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 1150 5250 3100
 Wire Wire Line
-	5250 3700 5250 3900
-Wire Wire Line
 	5550 3100 5250 3100
-Connection ~ 5250 3100
-Wire Wire Line
-	5250 3100 5250 3300
-Wire Wire Line
-	5850 3100 6700 3100
 Wire Wire Line
 	6700 3100 6700 3050
 Wire Wire Line
@@ -922,26 +913,6 @@ Text GLabel 10550 4250 2    45   Input ~ 0
 PI_P_SIG
 Text GLabel -4300 3400 0    45   Output ~ 0
 PI_P_SIG
-$Comp
-L Connector_Generic:Conn_01x05 J2
-U 1 1 5B40371B
-P -5100 3000
-F 0 "J2" H -5100 3300 50  0000 C CNN
-F 1 "I2C BUS" H -5100 2700 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H -5100 3000 50  0001 C CNN
-F 3 "~" H -5100 3000 50  0001 C CNN
-	1    -5100 3000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	-4900 2800 -3150 2800
-Wire Wire Line
-	-4900 2900 -3150 2900
-Wire Wire Line
-	-4900 3000 -3150 3000
-Wire Wire Line
-	-3250 3200 -4900 3200
-Connection ~ -3250 3200
 Wire Wire Line
 	7500 6050 8200 6050
 Wire Wire Line
@@ -969,4 +940,231 @@ Wire Wire Line
 	1100 1650 1350 1650
 Wire Wire Line
 	1100 1850 1700 1850
+$Comp
+L Device:Battery BT2
+U 1 1 5B483E14
+P 5250 3300
+F 0 "BT2" H 5350 3400 50  0000 L CNN
+F 1 "3x AAA NiMh" H 5350 3300 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_2479_3xAAA" V 5250 3360 50  0001 C CNN
+F 3 "" V 5250 3360 50  0001 C CNN
+	1    5250 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 3100
+Wire Wire Line
+	5250 4000 5250 3950
+Wire Wire Line
+	5250 3550 5250 3500
+Wire Wire Line
+	6700 3100 7100 3100
+Wire Wire Line
+	7100 3100 7100 3050
+Connection ~ 6700 3100
+$Comp
+L Timer_RTC:DS3231M U2
+U 1 1 5B4C83EB
+P 4850 6950
+F 0 "U2" H 4550 7300 50  0000 R CNN
+F 1 "DS3231M" H 5250 7300 50  0000 R CNN
+F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 4850 6350 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 5120 7000 50  0001 C CNN
+	1    4850 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-3150 2800 -3350 2800
+Wire Wire Line
+	-3150 3000 -4300 3000
+Wire Wire Line
+	-4300 2900 -3150 2900
+$Comp
+L power:GND #PWR0101
+U 1 1 5B4D8BAD
+P 4850 7550
+F 0 "#PWR0101" H 4850 7300 50  0001 C CNN
+F 1 "GND" H 4850 7400 50  0000 C CNN
+F 2 "" H 4850 7550 50  0001 C CNN
+F 3 "" H 4850 7550 50  0001 C CNN
+	1    4850 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5B4D8F39
+P 4750 6150
+F 0 "#PWR0102" H 4750 6000 50  0001 C CNN
+F 1 "+3.3V" H 4750 6290 50  0000 C CNN
+F 2 "" H 4750 6150 50  0000 C CNN
+F 3 "" H 4750 6150 50  0000 C CNN
+	1    4750 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5B4D9250
+P 4200 6600
+F 0 "R13" V 4280 6600 50  0000 C CNN
+F 1 "4K7" V 4200 6600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4130 6600 50  0001 C CNN
+F 3 "" H 4200 6600 50  0001 C CNN
+	1    4200 6600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5B4D930E
+P 4100 6600
+F 0 "R12" V 4180 6600 50  0000 C CNN
+F 1 "4K7" V 4100 6600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4030 6600 50  0001 C CNN
+F 3 "" H 4100 6600 50  0001 C CNN
+	1    4100 6600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5B4DEABF
+P 5450 6600
+F 0 "R15" V 5530 6600 50  0000 C CNN
+F 1 "4K7" V 5450 6600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5380 6600 50  0001 C CNN
+F 3 "" H 5450 6600 50  0001 C CNN
+	1    5450 6600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5B4DEB5B
+P 5550 6600
+F 0 "R16" V 5630 6600 50  0000 C CNN
+F 1 "4K7" V 5550 6600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5480 6600 50  0001 C CNN
+F 3 "" H 5550 6600 50  0001 C CNN
+	1    5550 6600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 6150 4750 6250
+Wire Wire Line
+	4750 6250 4300 6250
+Wire Wire Line
+	4200 6250 4200 6450
+Wire Wire Line
+	4200 6250 4100 6250
+Wire Wire Line
+	4100 6250 4100 6450
+Connection ~ 4200 6250
+Wire Wire Line
+	4200 6750 4350 6750
+Wire Wire Line
+	4350 6850 4100 6850
+Wire Wire Line
+	4100 6850 4100 6750
+Wire Wire Line
+	5350 6750 5450 6750
+Wire Wire Line
+	5550 6750 5550 7050
+Wire Wire Line
+	5550 7050 5350 7050
+Wire Wire Line
+	4750 6250 5450 6250
+Wire Wire Line
+	5450 6250 5450 6450
+Connection ~ 4750 6250
+Wire Wire Line
+	5450 6250 5550 6250
+Wire Wire Line
+	5550 6250 5550 6450
+Connection ~ 5450 6250
+Wire Wire Line
+	4850 7350 4850 7450
+Wire Wire Line
+	4750 6550 4750 6250
+$Comp
+L Device:R R14
+U 1 1 5B51E526
+P 4300 6550
+F 0 "R14" V 4380 6550 50  0000 C CNN
+F 1 "4K7" V 4300 6550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4230 6550 50  0001 C CNN
+F 3 "" H 4300 6550 50  0001 C CNN
+	1    4300 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 6400 4300 6250
+Connection ~ 4300 6250
+Wire Wire Line
+	4300 6250 4200 6250
+Wire Wire Line
+	4300 6700 4300 7150
+Wire Wire Line
+	4300 7150 4350 7150
+$Comp
+L Device:C_Small C1
+U 1 1 5B52CF31
+P 3900 6550
+F 0 "C1" H 3910 6620 50  0000 L CNN
+F 1 "C_Small" H 3910 6470 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 3900 6550 50  0001 C CNN
+F 3 "~" H 3900 6550 50  0001 C CNN
+	1    3900 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6250 3900 6250
+Wire Wire Line
+	3900 6250 3900 6450
+Connection ~ 4100 6250
+Wire Wire Line
+	3900 7450 4850 7450
+Connection ~ 4850 7450
+Wire Wire Line
+	4850 7450 4850 7550
+Wire Wire Line
+	4100 6850 3750 6850
+Connection ~ 4100 6850
+Connection ~ 4200 6750
+Connection ~ 3900 6450
+Wire Wire Line
+	3900 6450 3900 6550
+Wire Wire Line
+	3900 6650 3900 7450
+Text GLabel 3750 6750 0    40   Input ~ 0
+SCL1
+Text GLabel 3750 6850 0    40   BiDi ~ 0
+SDA1
+Text GLabel -4300 3000 0    40   Input ~ 0
+SCL1
+Text GLabel -4300 2900 0    40   BiDi ~ 0
+SDA1
+Wire Wire Line
+	5950 6350 4850 6350
+Wire Wire Line
+	4850 6350 4850 6550
+Wire Wire Line
+	4850 7450 6250 7450
+Wire Wire Line
+	6250 7450 6250 6650
+Wire Wire Line
+	5850 3100 6550 3100
+Wire Wire Line
+	6550 3100 6550 6350
+Connection ~ 6550 3100
+Wire Wire Line
+	6550 3100 6700 3100
+Wire Wire Line
+	3750 6750 4200 6750
+$Comp
+L Regulator_Linear:MCP1700-1202E_SOT89 U3
+U 1 1 5B47FA3C
+P 6250 6350
+F 0 "U3" H 6100 6475 50  0000 C CNN
+F 1 "MCP1700-1202E_SOT89" H 6250 6475 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 6250 6550 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826C.pdf" H 6250 6300 50  0001 C CNN
+	1    6250 6350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
