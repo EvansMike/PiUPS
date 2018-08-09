@@ -5,7 +5,12 @@
 import os
 import time
 import RPi.GPIO as GPIO
+
+# Pin definitions
 POWER_WAIT = 30
+POWER_LOSS = 22
+RELAY = 27
+
 p = GPIO.PWM(27, 2000)
 
 # handle the power change event
@@ -13,17 +18,23 @@ def signal_power_change_handler (pin):
     timestr = time.strftime("%Y-%m-%d %H:%M:%S")
     p.start(50) # Power saving, 50%, for relay hold on
     os.system("logger Power loss at " + timestr)
-    # Loop for 30s and check if power still off
+    # Loop for 30s then check if the power is still off
     t_shutdown = time.time() + POWER_WAIT
     while time.time() < t_shutdown:
-        if GPIO.input(22) == 0:
-            p.stop()
-            os.system("logger Power restore at " + timestr)
-            return
-    # If it's still of order a shutdown
-    os.system("sudo shutdown -h now")
-    GPIO,cleanup()
-    quit(0)
+        pass
+    if GPIO.input(22) == 0: # Check the pin state
+        # If it's still off, order a shut down
+        timestr = time.strftime("%Y-%m-%d %H:%M:%S")
+        os.system("logger UPS ordered power down at " + timestr)
+        os.system("sudo shutdown -h now")
+        GPIO,cleanup()
+        quit(0)
+    else:
+        timestr = time.strftime("%Y-%m-%d %H:%M:%S")
+        p.stop() # Back to just ON
+        GPIO.output(27,True)
+        os.system("logger Power restore at " + timestr)
+        return
 
 
 # main function
