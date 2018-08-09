@@ -4,17 +4,17 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
-Title ""
-Date "15 nov 2012"
-Rev ""
-Comp ""
+Sheet 1 3
+Title "Raspberry Pi UPS"
+Date "2018-08-09"
+Rev "V2"
+Comp "MIllstream Computing"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 1150 5150 0    50   ~ 0
+Text Notes 700  6600 0    50   ~ 0
 ID_SD and ID_SC PINS:\nThese pins are reserved for HAT ID EEPROM.\n\nAt boot time this I2C interface will be\ninterrogated to look for an EEPROM\nthat identifes the attached board and\nallows automagic setup of the GPIOs\n(and optionally, Linux drivers).\n\nDO NOT USE these pins for anything other\nthan attaching an I2C ID EEPROM. Leave\nunconnected if ID EEPROM not required.
 $Comp
 L Mechanical:Mounting_Hole MK1
@@ -709,230 +709,230 @@ Wire Wire Line
 Wire Wire Line
 	7650 3300 7650 3250
 Connection ~ 7250 3300
-Text GLabel -4300 2900 0    40   BiDi ~ 0
+Text GLabel -3150 2950 0    40   BiDi ~ 0
 SDA1
-Text GLabel -4300 3000 0    40   Input ~ 0
+Text GLabel -3150 3050 0    40   Input ~ 0
 SCL1
 Wire Wire Line
-	-4300 2900 -3150 2900
+	-3150 2950 -2000 2950
 Wire Wire Line
-	-3150 3000 -4300 3000
+	-2000 3050 -3150 3050
 Wire Wire Line
-	-3150 2800 -3350 2800
-Text GLabel -4300 3400 0    45   Output ~ 0
+	-2000 2850 -2200 2850
+Text GLabel -3150 3450 0    45   Output ~ 0
 PI_P_SIG
-Text GLabel -4300 3500 0    50   Input ~ 0
+Text GLabel -3150 3550 0    50   Input ~ 0
 POWER_FAIL
 Wire Wire Line
-	-2650 3500 -1600 3500
+	-1500 3550 -450 3550
 Wire Wire Line
-	-3150 4000 -3250 4000
+	-2000 4050 -2100 4050
 Wire Wire Line
-	-2650 4000 -1600 4000
+	-1500 4050 -450 4050
 Wire Wire Line
-	-4300 3500 -3150 3500
-Connection ~ -3250 4000
+	-3150 3550 -2000 3550
+Connection ~ -2100 4050
 Wire Wire Line
-	-3250 3200 -3250 4000
+	-2100 3250 -2100 4050
 Wire Wire Line
-	-3350 2650 -3350 2800
+	-2200 2700 -2200 2850
 Wire Wire Line
-	-2650 4700 -1600 4700
+	-1500 4750 -450 4750
 Wire Wire Line
-	-2650 4300 -1600 4300
+	-1500 4350 -450 4350
 Wire Wire Line
-	-2650 3100 -1600 3100
+	-1500 3150 -450 3150
 Wire Wire Line
-	-2650 3300 -1600 3300
+	-1500 3350 -450 3350
 Wire Wire Line
-	-2650 3200 -1600 3200
+	-1500 3250 -450 3250
 Wire Wire Line
-	-2650 3600 -1600 3600
+	-1500 3650 -450 3650
 Wire Wire Line
-	-2650 3900 -1600 3900
+	-1500 3950 -450 3950
 Wire Wire Line
-	-2650 3800 -1600 3800
+	-1500 3850 -450 3850
 Wire Wire Line
-	-2650 4100 -1600 4100
+	-1500 4150 -450 4150
 Wire Wire Line
-	-2650 4600 -1600 4600
+	-1500 4650 -450 4650
 Wire Wire Line
-	-2650 4500 -1600 4500
+	-1500 4550 -450 4550
 Wire Wire Line
-	-2650 2900 -2450 2900
+	-1500 2950 -1300 2950
 Wire Wire Line
-	-2450 2800 -2450 2900
-Text Label -1600 4700 2    50   ~ 0
+	-1300 2850 -1300 2950
+Text Label -450 4750 2    50   ~ 0
 GPIO21(SPI1_SCK)
 $Comp
 L Connector_Generic:Conn_02x20_Odd_Even P1
 U 1 1 59AD464A
-P -2950 3700
-F 0 "P1" H -2900 4817 50  0000 C CNN
-F 1 "Conn_02x20_Odd_Even" H -2900 4726 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H -7800 2750 50  0001 C CNN
-F 3 "" H -7800 2750 50  0001 C CNN
-	1    -2950 3700
+P -1800 3750
+F 0 "P1" H -1750 4867 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H -1750 4776 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H -6650 2800 50  0001 C CNN
+F 3 "" H -6650 2800 50  0001 C CNN
+	1    -1800 3750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	-2550 3000 -2650 3000
-Text Label -1600 3100 2    50   ~ 0
+	-1400 3050 -1500 3050
+Text Label -450 3150 2    50   ~ 0
 GPIO14(TXD0)
-Text Label -1600 3200 2    50   ~ 0
+Text Label -450 3250 2    50   ~ 0
 GPIO15(RXD0)
-Text Label -1600 3300 2    50   ~ 0
+Text Label -450 3350 2    50   ~ 0
 GPIO18(GEN1)(PWM0)
-Text Label -1600 3500 2    50   ~ 0
+Text Label -450 3550 2    50   ~ 0
 GPIO23(GEN4)
-Text Label -1600 3600 2    50   ~ 0
+Text Label -450 3650 2    50   ~ 0
 GPIO24(GEN5)
-Text Label -1600 3800 2    50   ~ 0
+Text Label -450 3850 2    50   ~ 0
 GPIO25(GEN6)
-Text Label -1600 3900 2    50   ~ 0
+Text Label -450 3950 2    50   ~ 0
 GPIO8(SPI0_CE_N)
-Text Label -1600 4000 2    50   ~ 0
+Text Label -450 4050 2    50   ~ 0
 GPIO7(SPI1_CE_N)
-Text Label -1600 4100 2    50   ~ 0
+Text Label -450 4150 2    50   ~ 0
 ID_SC
-Text Label -1600 4300 2    50   ~ 0
+Text Label -450 4350 2    50   ~ 0
 GPIO12(PWM0)
-Text Label -1600 4500 2    50   ~ 0
+Text Label -450 4550 2    50   ~ 0
 GPIO16
-Text Label -1600 4600 2    50   ~ 0
+Text Label -450 4650 2    50   ~ 0
 GPIO20(SPI1_MOSI)
-Text Label -4300 4600 0    50   ~ 0
+Text Label -3150 4650 0    50   ~ 0
 GPIO26
-Text Label -4300 4500 0    50   ~ 0
+Text Label -3150 4550 0    50   ~ 0
 GPIO19(SPI1_MISO)
-Text Label -4300 4400 0    50   ~ 0
+Text Label -3150 4450 0    50   ~ 0
 GPIO13(PWM1)
-Text Label -4300 4300 0    50   ~ 0
+Text Label -3150 4350 0    50   ~ 0
 GPIO6
-Text Label -4300 4200 0    50   ~ 0
+Text Label -3150 4250 0    50   ~ 0
 GPIO5
-Text Label -4300 4100 0    50   ~ 0
+Text Label -3150 4150 0    50   ~ 0
 ID_SD
-Text Label -4300 3900 0    50   ~ 0
+Text Label -3150 3950 0    50   ~ 0
 GPIO11(SPI0_SCK)
-Text Label -4300 3800 0    50   ~ 0
+Text Label -3150 3850 0    50   ~ 0
 GPIO9(SPI0_MISO)
-Text Label -4300 3700 0    50   ~ 0
+Text Label -3150 3750 0    50   ~ 0
 GPIO10(SPI0_MOSI)
-Text Label -4300 3500 0    50   ~ 0
+Text Label -3150 3550 0    50   ~ 0
 GPIO22(GEN3)
-Text Label -4300 3400 0    50   ~ 0
+Text Label -3150 3450 0    50   ~ 0
 GPIO27(GEN2)
-Text Label -4300 3300 0    50   ~ 0
+Text Label -3150 3350 0    50   ~ 0
 GPIO17(GEN0)
-Text Label -4300 3100 0    50   ~ 0
+Text Label -3150 3150 0    50   ~ 0
 GPIO4(GCLK)
-Text Label -4300 3000 0    50   ~ 0
+Text Label -3150 3050 0    50   ~ 0
 GPIO3(SCL1)
-Text Label -4300 2900 0    50   ~ 0
+Text Label -3150 2950 0    50   ~ 0
 GPIO2(SDA1)
 Wire Wire Line
-	-4300 4600 -3150 4600
+	-3150 4650 -2000 4650
 Wire Wire Line
-	-4300 4500 -3150 4500
+	-3150 4550 -2000 4550
 Wire Wire Line
-	-3150 4400 -4300 4400
+	-2000 4450 -3150 4450
 Wire Wire Line
-	-4300 4300 -3150 4300
+	-3150 4350 -2000 4350
 Wire Wire Line
-	-4300 4200 -3150 4200
+	-3150 4250 -2000 4250
 Wire Wire Line
-	-3150 4100 -4300 4100
+	-2000 4150 -3150 4150
 Wire Wire Line
-	-4300 3900 -3150 3900
+	-3150 3950 -2000 3950
 Wire Wire Line
-	-4300 3800 -3150 3800
+	-3150 3850 -2000 3850
 Wire Wire Line
-	-3150 3700 -4300 3700
+	-2000 3750 -3150 3750
 Wire Wire Line
-	-4300 3400 -3150 3400
+	-3150 3450 -2000 3450
 Wire Wire Line
-	-3150 3300 -4300 3300
+	-2000 3350 -3150 3350
 Wire Wire Line
-	-4300 3100 -3150 3100
+	-3150 3150 -2000 3150
 Wire Wire Line
-	-3250 3200 -3150 3200
+	-2100 3250 -2000 3250
 $Comp
 L power:+3.3V #PWR0108
 U 1 1 580C1BC1
-P -3350 2650
-F 0 "#PWR0108" H -3350 2500 50  0001 C CNN
-F 1 "+3.3V" H -3350 2790 50  0000 C CNN
-F 2 "" H -3350 2650 50  0000 C CNN
-F 3 "" H -3350 2650 50  0000 C CNN
-	1    -3350 2650
+P -2200 2700
+F 0 "#PWR0108" H -2200 2550 50  0001 C CNN
+F 1 "+3.3V" H -2200 2840 50  0000 C CNN
+F 2 "" H -2200 2700 50  0000 C CNN
+F 3 "" H -2200 2700 50  0000 C CNN
+	1    -2200 2700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	-3250 4000 -3250 4700
+	-2100 4050 -2100 4750
 Wire Wire Line
-	-3250 4700 -3250 4850
-Connection ~ -3250 4700
+	-2100 4750 -2100 4900
+Connection ~ -2100 4750
 Wire Wire Line
-	-3250 4700 -3150 4700
+	-2100 4750 -2000 4750
 $Comp
 L power:GND #PWR0109
 U 1 1 580C1E01
-P -3250 4850
-F 0 "#PWR0109" H -3250 4600 50  0001 C CNN
-F 1 "GND" H -3250 4700 50  0000 C CNN
-F 2 "" H -3250 4850 50  0000 C CNN
-F 3 "" H -3250 4850 50  0000 C CNN
-	1    -3250 4850
+P -2100 4900
+F 0 "#PWR0109" H -2100 4650 50  0001 C CNN
+F 1 "GND" H -2100 4750 50  0000 C CNN
+F 2 "" H -2100 4900 50  0000 C CNN
+F 3 "" H -2100 4900 50  0000 C CNN
+	1    -2100 4900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	-2550 3000 -2550 3400
-Connection ~ -2550 3400
+	-1400 3050 -1400 3450
+Connection ~ -1400 3450
 Wire Wire Line
-	-2550 3400 -2650 3400
+	-1400 3450 -1500 3450
 Wire Wire Line
-	-2550 3400 -2550 3700
-Connection ~ -2550 3700
+	-1400 3450 -1400 3750
+Connection ~ -1400 3750
 Wire Wire Line
-	-2550 3700 -2650 3700
+	-1400 3750 -1500 3750
 Wire Wire Line
-	-2550 3700 -2550 4200
-Connection ~ -2550 4200
+	-1400 3750 -1400 4250
+Connection ~ -1400 4250
 Wire Wire Line
-	-2550 4200 -2650 4200
+	-1400 4250 -1500 4250
 Wire Wire Line
-	-2550 4400 -2550 4850
+	-1400 4450 -1400 4900
 Wire Wire Line
-	-2550 4200 -2550 4400
-Connection ~ -2550 4400
+	-1400 4250 -1400 4450
+Connection ~ -1400 4450
 Wire Wire Line
-	-2550 4400 -2650 4400
+	-1400 4450 -1500 4450
 $Comp
 L power:GND #PWR0110
 U 1 1 580C1D11
-P -2550 4850
-F 0 "#PWR0110" H -2550 4600 50  0001 C CNN
-F 1 "GND" H -2550 4700 50  0000 C CNN
-F 2 "" H -2550 4850 50  0000 C CNN
-F 3 "" H -2550 4850 50  0000 C CNN
-	1    -2550 4850
+P -1400 4900
+F 0 "#PWR0110" H -1400 4650 50  0001 C CNN
+F 1 "GND" H -1400 4750 50  0000 C CNN
+F 2 "" H -1400 4900 50  0000 C CNN
+F 3 "" H -1400 4900 50  0000 C CNN
+	1    -1400 4900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	-2450 2800 -2650 2800
-Connection ~ -2450 2800
+	-1300 2850 -1500 2850
+Connection ~ -1300 2850
 Wire Wire Line
-	-2450 2650 -2450 2800
+	-1300 2700 -1300 2850
 $Comp
 L power:+5V #PWR0111
 U 1 1 580C1B61
-P -2450 2650
-F 0 "#PWR0111" H -2450 2500 50  0001 C CNN
-F 1 "+5V" H -2450 2790 50  0000 C CNN
-F 2 "" H -2450 2650 50  0000 C CNN
-F 3 "" H -2450 2650 50  0000 C CNN
-	1    -2450 2650
+P -1300 2700
+F 0 "#PWR0111" H -1300 2550 50  0001 C CNN
+F 1 "+5V" H -1300 2840 50  0000 C CNN
+F 2 "" H -1300 2700 50  0000 C CNN
+F 3 "" H -1300 2700 50  0000 C CNN
+	1    -1300 2700
 	1    0    0    -1  
 $EndComp
 $Sheet
@@ -972,227 +972,10 @@ Wire Wire Line
 Wire Wire Line
 	7250 2150 7250 2250
 Connection ~ 8250 1850
-$Comp
-L hat-design-rescue:AT24CS32-MAHM IC1
-U 1 1 54F33AFB
-P 2000 6500
-F 0 "IC1" H 1800 6750 40  0000 C CNN
-F 1 "CAT24C32WI-GT3" H 2300 6200 40  0000 C CNN
-F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 2000 6500 35  0000 C CIN
-F 3 "" H 2000 6500 60  0000 C CNN
-	1    2000 6500
-	1    0    0    -1  
-$EndComp
-$Comp
-L hat-design-rescue:GND #PWR0112
-U 1 1 54F33AFC
-P 1450 6550
-F 0 "#PWR0112" H 1450 6550 30  0001 C CNN
-F 1 "GND" H 1450 6480 30  0001 C CNN
-F 2 "" H 1450 6550 60  0000 C CNN
-F 3 "" H 1450 6550 60  0000 C CNN
-	1    1450 6550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1450 6550 1500 6550
-Wire Wire Line
-	1500 6350 1500 6450
-Wire Wire Line
-	1500 6450 1600 6450
-Connection ~ 1500 6550
-Wire Wire Line
-	1500 6350 1600 6350
-Connection ~ 1500 6450
-$Comp
-L hat-design-rescue:GND #PWR0113
-U 1 1 54F33AFD
-P 2000 7000
-F 0 "#PWR0113" H 2000 7000 30  0001 C CNN
-F 1 "GND" H 2000 6930 30  0001 C CNN
-F 2 "" H 2000 7000 60  0000 C CNN
-F 3 "" H 2000 7000 60  0000 C CNN
-	1    2000 7000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 7000 2000 6900
-$Comp
-L hat-design-rescue:+3.3V #PWR0114
-U 1 1 54F33AFE
-P 2000 6050
-F 0 "#PWR0114" H 2000 6010 30  0001 C CNN
-F 1 "+3.3V" H 2000 6160 30  0000 C CNN
-F 2 "" H 2000 6050 60  0000 C CNN
-F 3 "" H 2000 6050 60  0000 C CNN
-	1    2000 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 6150 2000 6050
-$Comp
-L hat-design-rescue:R R1
-U 1 1 54F33AFF
-P 1200 6450
-F 0 "R1" V 1280 6450 40  0000 C CNN
-F 1 "1K" V 1207 6451 40  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1130 6450 30  0000 C CNN
-F 3 "~" H 1200 6450 30  0000 C CNN
-	1    1200 6450
-	-1   0    0    1   
-$EndComp
-$Comp
-L hat-design-rescue:+3.3V #PWR0115
-U 1 1 54F33B00
-P 1200 6100
-F 0 "#PWR0115" H 1200 6060 30  0001 C CNN
-F 1 "+3.3V" H 1200 6210 30  0000 C CNN
-F 2 "" H 1200 6100 60  0000 C CNN
-F 3 "" H 1200 6100 60  0000 C CNN
-	1    1200 6100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 6200 1200 6100
-Wire Wire Line
-	1200 6700 1600 6700
-Wire Wire Line
-	1200 6700 1200 6900
-$Comp
-L hat-design-rescue:GND #PWR0116
-U 1 1 54F33B04
-P 1200 7250
-F 0 "#PWR0116" H 1200 7250 30  0001 C CNN
-F 1 "GND" H 1200 7180 30  0001 C CNN
-F 2 "" H 1200 7250 60  0000 C CNN
-F 3 "" H 1200 7250 60  0000 C CNN
-	1    1200 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 7250 1200 7100
-Text GLabel 3050 6550 2    60   Input ~ 0
-ID_SC
-Text GLabel 3050 6400 2    60   Input ~ 0
+Text GLabel -3150 4150 0    60   BiDi ~ 0
 ID_SD
-Wire Wire Line
-	2400 6400 2600 6400
-Wire Wire Line
-	2400 6550 2850 6550
-Wire Wire Line
-	2600 6150 2600 6400
-Connection ~ 2600 6400
-Wire Wire Line
-	2850 6150 2850 6550
-Connection ~ 2850 6550
-$Comp
-L hat-design-rescue:+3.3V #PWR0117
-U 1 1 54F33B07
-P 2600 5800
-F 0 "#PWR0117" H 2600 5760 30  0001 C CNN
-F 1 "+3.3V" H 2600 5910 30  0000 C CNN
-F 2 "" H 2600 5800 60  0000 C CNN
-F 3 "" H 2600 5800 60  0000 C CNN
-	1    2600 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L hat-design-rescue:+3.3V #PWR0118
-U 1 1 54F33B08
-P 2850 5800
-F 0 "#PWR0118" H 2850 5760 30  0001 C CNN
-F 1 "+3.3V" H 2850 5910 30  0000 C CNN
-F 2 "" H 2850 5800 60  0000 C CNN
-F 3 "" H 2850 5800 60  0000 C CNN
-	1    2850 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 5850 2600 5800
-Wire Wire Line
-	2850 5850 2850 5800
-$Comp
-L hat-design-rescue:C C1
-U 1 1 54F33B0F
-P 800 6450
-F 0 "C1" H 800 6550 40  0000 L CNN
-F 1 "0.1uF" H 806 6365 40  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 838 6300 30  0000 C CNN
-F 3 "~" H 800 6450 60  0000 C CNN
-	1    800  6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L hat-design-rescue:+3.3V #PWR0119
-U 1 1 54F33B10
-P 800 6200
-F 0 "#PWR0119" H 800 6160 30  0001 C CNN
-F 1 "+3.3V" H 800 6310 30  0000 C CNN
-F 2 "" H 800 6200 60  0000 C CNN
-F 3 "" H 800 6200 60  0000 C CNN
-	1    800  6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L hat-design-rescue:GND #PWR0120
-U 1 1 54F33B11
-P 800 6800
-F 0 "#PWR0120" H 800 6800 30  0001 C CNN
-F 1 "GND" H 800 6730 30  0001 C CNN
-F 2 "" H 800 6800 60  0000 C CNN
-F 3 "" H 800 6800 60  0000 C CNN
-	1    800  6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	800  6250 800  6200
-Wire Wire Line
-	800  6800 800  6650
-Wire Wire Line
-	1500 6550 1600 6550
-Wire Wire Line
-	1500 6450 1500 6550
-Wire Wire Line
-	2600 6400 3050 6400
-Wire Wire Line
-	2850 6550 3050 6550
-Text GLabel -4300 4100 0    60   Input ~ 0
-ID_SD
-Text GLabel -1600 4100 2    60   Input ~ 0
+Text GLabel -450 4150 2    60   Input ~ 0
 ID_SC
-$Comp
-L Device:Jumper_NO_Small JP2
-U 1 1 5B614B58
-P 1200 7000
-F 0 "JP2" H 1200 7080 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 1210 6940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 7000 50  0001 C CNN
-F 3 "~" H 1200 7000 50  0001 C CNN
-	1    1200 7000
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5B627233
-P 2600 6000
-F 0 "R2" V 2680 6000 50  0000 C CNN
-F 1 "4K7" V 2600 6000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2530 6000 50  0001 C CNN
-F 3 "" H 2600 6000 50  0001 C CNN
-	1    2600 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5B6272C9
-P 2850 6000
-F 0 "R3" V 2930 6000 50  0000 C CNN
-F 1 "4K7" V 2850 6000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2780 6000 50  0001 C CNN
-F 3 "" H 2850 6000 50  0001 C CNN
-	1    2850 6000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2650 3000 3150 3000
 Wire Wire Line
@@ -1244,4 +1027,26 @@ Wire Wire Line
 	1850 3300 1750 3300
 Wire Wire Line
 	7150 2650 6850 2650
+$Sheet
+S 900  6750 950  500 
+U 5B6D74BD
+F0 "Sheet5B6D74BC" 50
+F1 "eeprom.sch" 50
+F2 "ID_SD" B R 1850 6900 50 
+F3 "ID_SC" I R 1850 7050 50 
+$EndSheet
+Text Notes 3850 5400 0    50   ~ 0
+Held ON by \ninput voltage.
+Text Notes 5950 4950 0    50   ~ 0
+Goes HIGH when Q1\nis OFF
+Text Notes 7100 5500 0    50   ~ 0
+ON when Q1\nis OFF
+Text GLabel 2050 7050 2    60   Input ~ 0
+ID_SC
+Wire Wire Line
+	1850 7050 2050 7050
+Text GLabel 2050 6900 2    60   BiDi ~ 0
+ID_SD
+Wire Wire Line
+	1850 6900 2050 6900
 $EndSCHEMATC
