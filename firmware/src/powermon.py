@@ -19,7 +19,7 @@ p = None
 t_shutdown = None
 
 # handle the power change event
-def signal_power_change_handler (pin):
+def signal_power_change_handler(pin):
     global p
     global t_shutdown
     timestr = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -46,6 +46,14 @@ def signal_power_change_handler (pin):
             GPIO.output(27,True)
             os.system("logger Power restore at " + timestr)
             return
+
+
+def sig_pin_high():
+    return
+
+
+def sig_pin_low():
+    return
 
 
 # main function
