@@ -1023,4 +1023,15 @@ Wire Wire Line
 	7050 3100 6150 3100
 Wire Wire Line
 	6150 3100 6150 2050
+$Comp
+L Battery_Management:MCP73831-4-OT U?
+U 1 1 5C1EB8E9
+P 2400 2350
+F 0 "U?" H 2100 2600 50  0000 L CNN
+F 1 "MCP73831-4-OT" H 2450 2600 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2450 2100 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 2250 2300 50  0001 C CNN
+	1    2400 2350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
