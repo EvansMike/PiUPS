@@ -1,0 +1,9 @@
+= Improved UPS for Raspberry Pi
+
+This based on the UPS documented at http://homediyelectronics.com/projects/raspberrypi/ups/ but uses only 4 AAA NiMh cells and is charged from the Pi +5V pins.
+
+Ensure that the cells are charged before fitting, the charge current is very low, 50mA, and a charge from flat will take a very long time.
+
+The Raspberry pi PSU seem to output 5.1 volts and a fully charger NiMh pack of four is 4.8V, which is *just( about enough to power the Pi for a few minutes.  A few minutes is all we need to get safe shut-down when the main power is removed.
+
+The "powered" signal is held LOW by Q1 being turned on by the main power.  When power is lost the Battery power is sufficient to power the pi but the voltage is too low to hold Q1 ON so the voltage on the collector rises, turning ON Q3.  This signals the Pi firmware that it is running on battereis and should shut down after a short period.  The short wait is to allow for very short glitches in the power.
