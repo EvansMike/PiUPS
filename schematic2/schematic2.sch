@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "Raspberry Pi UPS"
-Date "2018-08-09"
-Rev "V3"
+Date "2018-12-22"
+Rev "V2"
 Comp "MIllstream Computing"
 Comment1 ""
 Comment2 ""
@@ -37,28 +37,6 @@ F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9080 4250 
 F 3 "" H 9150 4250 50  0001 C CNN
 	1    9150 4250
 	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4001 D7
-U 1 1 5B3B494C
-P 6000 2050
-F 0 "D7" H 6000 2150 50  0000 C CNN
-F 1 "1N4001" H 6000 1950 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6000 1875 50  0001 C CNN
-F 3 "" H 6000 2050 50  0001 C CNN
-	1    6000 2050
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR0102
-U 1 1 5B3B8DC7
-P 2150 1350
-F 0 "#PWR0102" H 2150 1200 50  0001 C CNN
-F 1 "+5V" H 2150 1490 50  0000 C CNN
-F 2 "" H 2150 1350 50  0001 C CNN
-F 3 "" H 2150 1350 50  0001 C CNN
-	1    2150 1350
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0103
@@ -91,17 +69,6 @@ F 1 "4K7" V 7150 4950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7080 4950 50  0001 C CNN
 F 3 "" H 7150 4950 50  0001 C CNN
 	1    7150 4950
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5B3B941B
-P 4950 5800
-F 0 "R9" V 5030 5800 50  0000 C CNN
-F 1 "8K2" V 4950 5800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4880 5800 50  0001 C CNN
-F 3 "" H 4950 5800 50  0001 C CNN
-	1    4950 5800
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -138,17 +105,6 @@ F 3 "" H 4700 650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Diode:1N4001 D5
-U 1 1 5B3B9C1D
-P 4800 1650
-F 0 "D5" H 4800 1750 50  0000 C CNN
-F 1 "1N5404" H 4800 1550 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4800 1475 50  0001 C CNN
-F 3 "" H 4800 1650 50  0001 C CNN
-	1    4800 1650
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R12
 U 1 1 5B3B9E73
 P 8550 4750
@@ -168,17 +124,6 @@ F 1 "1N4148" H 3550 550 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3550 475 50  0001 C CNN
 F 3 "" H 3550 650 50  0001 C CNN
 	1    3550 650 
-	-1   0    0    1   
-$EndComp
-$Comp
-L Diode:1N4148 D6
-U 1 1 5B3BA0CE
-P 4950 1150
-F 0 "D6" H 4950 1250 50  0000 C CNN
-F 1 "1N4148" H 4950 1050 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4950 975 50  0001 C CNN
-F 3 "" H 4950 1150 50  0001 C CNN
-	1    4950 1150
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -260,10 +205,6 @@ F 3 "" H 10250 2650 50  0001 C CNN
 $EndComp
 Text GLabel 5850 4800 2    45   Output ~ 0
 POWER_FAIL
-Wire Wire Line
-	2150 1650 2150 1350
-Wire Wire Line
-	2150 1650 2600 1650
 $Comp
 L power:GND #PWR0106
 U 1 1 5B4BF645
@@ -279,7 +220,6 @@ Wire Wire Line
 	2800 650  2600 650 
 Wire Wire Line
 	2600 650  2600 1150
-Connection ~ 2600 1650
 Wire Wire Line
 	3100 650  3400 650 
 Wire Wire Line
@@ -303,20 +243,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 1150 4300 1150
 Wire Wire Line
-	2600 1650 3350 1650
-Wire Wire Line
 	5100 1150 5600 1150
-$Comp
-L power:GND #PWR0107
-U 1 1 5B4DB757
-P 7450 1750
-F 0 "#PWR0107" H 7450 1500 50  0001 C CNN
-F 1 "GND" H 7450 1600 50  0000 C CNN
-F 2 "" H 7450 1750 50  0001 C CNN
-F 3 "" H 7450 1750 50  0001 C CNN
-	1    7450 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8550 4250 8150 4250
 Wire Wire Line
@@ -335,19 +262,10 @@ Wire Wire Line
 Wire Wire Line
 	5850 4800 5500 4800
 Wire Wire Line
-	5500 4800 5500 5450
-Wire Wire Line
-	5500 5450 6300 5450
-Wire Wire Line
 	7150 6050 4950 6050
 Wire Wire Line
 	4950 6050 4950 5950
 Connection ~ 7150 6050
-Wire Wire Line
-	4950 5650 4950 5450
-Wire Wire Line
-	4950 5450 5500 5450
-Connection ~ 5500 5450
 $Comp
 L Transistor_BJT:BC547 Q1
 U 1 1 5B51B5AE
@@ -367,10 +285,9 @@ Connection ~ 4950 6050
 Wire Wire Line
 	4150 4950 4950 4950
 Wire Wire Line
-	4950 4950 4950 5450
+	4950 4950 4950 5200
 Wire Wire Line
 	4150 4950 4150 4700
-Connection ~ 4950 5450
 Wire Wire Line
 	4150 5200 4150 4950
 Connection ~ 4150 4950
@@ -382,8 +299,6 @@ Wire Wire Line
 	6800 4150 6800 3950
 Wire Wire Line
 	6800 3950 7150 3950
-Wire Wire Line
-	8700 3950 8700 1650
 Connection ~ 8700 1650
 Wire Wire Line
 	8700 1650 9500 1650
@@ -446,28 +361,20 @@ L Device:D_Zener D3
 U 1 1 5B5551CB
 P 3350 3450
 F 0 "D3" H 3350 3550 50  0000 C CNN
-F 1 "5V6" H 3350 3350 50  0000 C CNN
+F 1 "3V0" H 3350 3350 50  0000 C CNN
 F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 3350 3450 50  0001 C CNN
 F 3 "~" H 3350 3450 50  0001 C CNN
 	1    3350 3450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3350 2400 3350 1650
-Connection ~ 3350 1650
-Wire Wire Line
-	3350 1650 4650 1650
-Wire Wire Line
 	3350 2700 3350 3300
 Wire Wire Line
 	3350 3600 3350 4750
 Wire Wire Line
-	3350 5050 3350 5400
+	3350 5050 3350 5250
 Wire Wire Line
-	3850 5400 3350 5400
-Connection ~ 3350 5400
-Wire Wire Line
-	3350 5400 3350 5600
+	3850 5400 3500 5400
 Wire Wire Line
 	3350 5900 3350 6050
 Wire Wire Line
@@ -478,19 +385,6 @@ Wire Wire Line
 Connection ~ 8550 4250
 Wire Wire Line
 	9900 4250 9950 4250
-$Comp
-L Device:Jumper_NO_Small JP1
-U 1 1 5B586BE9
-P 9500 3150
-F 0 "JP1" H 9500 3230 50  0000 C CNN
-F 1 "UPS" H 9510 3090 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9500 3150 50  0001 C CNN
-F 3 "~" H 9500 3150 50  0001 C CNN
-	1    9500 3150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9500 3050 9500 1650
 Connection ~ 9500 1650
 Wire Wire Line
 	9500 1650 10250 1650
@@ -507,8 +401,6 @@ F 3 "" H 9750 4250 50  0001 C CNN
 	1    9750 4250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9500 3250 9500 4250
 Connection ~ 9500 4250
 Wire Wire Line
 	9500 4250 9600 4250
@@ -524,8 +416,6 @@ Text Notes 9500 4650 0    50   ~ 0
 CAN USE PWM HERE TO LOWER THE\nRELAY HOLD CURRENT SINCE RELAY\nIS HELD ON ALL THE TIME PI IS ON
 Text Notes 2650 1550 0    50   ~ 0
 R6 SHOULD BE ADJUSTED TO GIVE\nAPPROPRIATE CHARGING CURRENT\nFOR THE BATTERIES USED, AT\nAPPROX 0.05 CAPACITY
-Text Notes 9300 3000 0    50   ~ 0
-JUMPER FOR NO AUTO\nPOWER OFF.  STAY ON\nUNTIL BATTERY FLAT
 Wire Wire Line
 	5600 2900 5600 2700
 Text GLabel -3150 2950 0    40   BiDi ~ 0
@@ -755,63 +645,55 @@ F 3 "" H -1300 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 4000 2800 800  500 
+S 4400 3150 800  500 
 U 5B4BA298
 F0 "Sheet5B4BA297" 40
 F1 "clock.sch" 40
-F2 "GND" I R 4800 3200 40 
-F3 "V3v3" I L 4000 2950 40 
-F4 "SCL1" I L 4000 3100 40 
-F5 "SDA1" B L 4000 3200 40 
-F6 "VI" I R 4800 2900 50 
+F2 "GND" I R 5200 3550 40 
+F3 "SCL1" I L 4400 3450 40 
+F4 "SDA1" B L 4400 3550 40 
+F5 "VI" I R 5200 3250 50 
+F6 "V_BAT" I R 5200 3400 50 
 $EndSheet
 Text GLabel -3150 4150 0    60   BiDi ~ 0
 ID_SD
 Text GLabel -450 4150 2    60   Input ~ 0
 ID_SC
-Wire Wire Line
-	4800 2900 5300 2900
-Wire Wire Line
-	5300 2900 5300 3200
 Connection ~ 5600 2050
 $Comp
 L power:GND #PWR0112
 U 1 1 5B5AD6CE
-P 4950 3300
-F 0 "#PWR0112" H 4950 3050 50  0001 C CNN
-F 1 "GND" H 4950 3150 50  0000 C CNN
-F 2 "" H 4950 3300 50  0001 C CNN
-F 3 "" H 4950 3300 50  0001 C CNN
-	1    4950 3300
+P 5350 3650
+F 0 "#PWR0112" H 5350 3400 50  0001 C CNN
+F 1 "GND" H 5350 3500 50  0000 C CNN
+F 2 "" H 5350 3650 50  0001 C CNN
+F 3 "" H 5350 3650 50  0001 C CNN
+	1    5350 3650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 3300 4950 3200
+	5350 3650 5350 3550
 Wire Wire Line
-	4950 3200 4800 3200
+	5350 3550 5200 3550
 $Comp
 L power:+3.3V #PWR0113
 U 1 1 5B5B71E2
-P 3600 2800
-F 0 "#PWR0113" H 3600 2650 50  0001 C CNN
-F 1 "+3.3V" H 3600 2940 50  0000 C CNN
-F 2 "" H 3600 2800 50  0000 C CNN
-F 3 "" H 3600 2800 50  0000 C CNN
-	1    3600 2800
+P 5800 3250
+F 0 "#PWR0113" H 5800 3100 50  0001 C CNN
+F 1 "+3.3V" H 5800 3390 50  0000 C CNN
+F 2 "" H 5800 3250 50  0000 C CNN
+F 3 "" H 5800 3250 50  0000 C CNN
+	1    5800 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3600 2800 3600 2950
-Wire Wire Line
-	3600 2950 4000 2950
-Text GLabel 3900 3100 0    40   Input ~ 0
+Text GLabel 4300 3450 0    40   Input ~ 0
 SCL1
-Text GLabel 3900 3200 0    40   BiDi ~ 0
+Text GLabel 4300 3550 0    40   BiDi ~ 0
 SDA1
 Wire Wire Line
-	3900 3100 4000 3100
+	4300 3450 4400 3450
 Wire Wire Line
-	4000 3200 3900 3200
+	4400 3550 4300 3550
 $Sheet
 S 1200 6650 950  500 
 U 5B6D74BD
@@ -879,17 +761,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3905.pdf" H 4100 1050 50  000
 $EndComp
 Text Notes 10550 1850 0    50   ~ 0
 TO PI\nAPPROX 350mA
-$Comp
-L power:+3.3V #PWR0101
-U 1 1 5B7509CF
-P 10700 1350
-F 0 "#PWR0101" H 10700 1200 50  0001 C CNN
-F 1 "+3.3V" H 10700 1490 50  0000 C CNN
-F 2 "" H 10700 1350 50  0000 C CNN
-F 3 "" H 10700 1350 50  0000 C CNN
-	1    10700 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5600 1150 5600 2050
 Wire Wire Line
@@ -933,79 +804,13 @@ F 3 "" H 7650 2750 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 3200 7850 3200
-Wire Wire Line
 	5600 2300 5600 2050
 Wire Wire Line
 	7850 2450 8250 2450
 Wire Wire Line
-	4950 1650 5900 1650
-Wire Wire Line
 	6950 2450 6950 2350
-$Comp
-L Regulator_Linear:AP1117-33 U1
-U 1 1 5B7C1E1F
-P 7450 1000
-F 0 "U1" H 7300 1125 50  0000 C CNN
-F 1 "AP1117-33" H 7450 1125 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 7450 1200 50  0001 C CNN
-F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 7550 750 50  0001 C CNN
-	1    7450 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C4
-U 1 1 5B7C22AD
-P 8000 1100
-F 0 "C4" H 8010 1170 50  0000 L CNN
-F 1 "22uF" H 8010 1020 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 8000 1100 50  0001 C CNN
-F 3 "~" H 8000 1100 50  0001 C CNN
-	1    8000 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP_Small C3
-U 1 1 5B7C2413
-P 6550 1150
-F 0 "C3" H 6560 1220 50  0000 L CNN
-F 1 "10uF" H 6560 1070 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 6550 1150 50  0001 C CNN
-F 3 "~" H 6550 1150 50  0001 C CNN
-	1    6550 1150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5900 1650 5900 1000
-Wire Wire Line
-	5900 1000 6550 1000
-Wire Wire Line
-	6550 1050 6550 1000
-Connection ~ 6550 1000
-Wire Wire Line
-	6550 1000 7150 1000
-Wire Wire Line
-	6550 1250 6550 1400
-Wire Wire Line
-	6550 1400 7450 1400
-Wire Wire Line
-	7450 1400 7450 1300
-Wire Wire Line
-	7450 1400 8000 1400
-Wire Wire Line
-	8000 1400 8000 1200
-Connection ~ 7450 1400
-Wire Wire Line
-	7750 1000 8000 1000
-Wire Wire Line
-	8000 1000 8700 1000
-Wire Wire Line
-	8700 1000 8700 1650
-Connection ~ 8000 1000
-Wire Wire Line
-	7450 1750 7450 1400
-Wire Wire Line
-	6950 2350 7850 2350
+	6950 2350 7350 2350
 Wire Wire Line
 	7850 2350 7850 2450
 Connection ~ 7850 2450
@@ -1014,9 +819,6 @@ Wire Wire Line
 	6950 2350 6800 2350
 Wire Wire Line
 	6800 2350 6800 1650
-Connection ~ 5900 1650
-Wire Wire Line
-	5900 1650 6800 1650
 Wire Wire Line
 	7850 3200 8250 3200
 Wire Wire Line
@@ -1024,14 +826,175 @@ Wire Wire Line
 Wire Wire Line
 	6150 3100 6150 2050
 $Comp
-L Battery_Management:MCP73831-4-OT U?
-U 1 1 5C1EB8E9
-P 2400 2350
-F 0 "U?" H 2100 2600 50  0000 L CNN
-F 1 "MCP73831-4-OT" H 2450 2600 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2450 2100 50  0001 L CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 2250 2300 50  0001 C CNN
-	1    2400 2350
+L Regulator_Linear:AP1117-33 U1
+U 1 1 5C229D91
+P 4450 6850
+F 0 "U1" H 4300 6975 50  0000 C CNN
+F 1 "AP1117-33" H 4450 6975 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4450 7050 50  0001 C CNN
+F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 4550 6600 50  0001 C CNN
+	1    4450 6850
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5C22A256
+P 3800 6850
+F 0 "#PWR0107" H 3800 6700 50  0001 C CNN
+F 1 "+5V" H 3800 6990 50  0000 C CNN
+F 2 "" H 3800 6850 50  0001 C CNN
+F 3 "" H 3800 6850 50  0001 C CNN
+	1    3800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 5C22A29D
+P 4450 7350
+F 0 "#PWR0116" H 4450 7100 50  0001 C CNN
+F 1 "GND" H 4450 7200 50  0000 C CNN
+F 2 "" H 4450 7350 50  0001 C CNN
+F 3 "" H 4450 7350 50  0001 C CNN
+	1    4450 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 6850 4150 6850
+Wire Wire Line
+	4750 6850 5300 6850
+Wire Wire Line
+	4450 7350 4450 7150
+Text GLabel 5300 6850 2    50   Output ~ 0
+V_BAT
+Text GLabel 5350 3400 2    50   Input ~ 0
+V_BAT
+Wire Wire Line
+	5200 3400 5350 3400
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5C2634E7
+P 5400 7400
+F 0 "H1" H 5400 7600 50  0000 C CNN
+F 1 "MountingHole" H 5400 7525 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.7mm" H 5400 7400 50  0001 C CNN
+F 3 "~" H 5400 7400 50  0001 C CNN
+	1    5400 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5C263578
+P 5700 7400
+F 0 "H2" H 5700 7600 50  0000 C CNN
+F 1 "MountingHole" H 5700 7525 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.7mm" H 5700 7400 50  0001 C CNN
+F 3 "~" H 5700 7400 50  0001 C CNN
+	1    5700 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3250 5800 3250
+$Comp
+L power:+5V #PWR0101
+U 1 1 5C282C0B
+P 10700 1350
+F 0 "#PWR0101" H 10700 1200 50  0001 C CNN
+F 1 "+5V" H 10700 1490 50  0000 C CNN
+F 2 "" H 10700 1350 50  0001 C CNN
+F 3 "" H 10700 1350 50  0001 C CNN
+	1    10700 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 6800 1650
+Wire Wire Line
+	6800 1650 8700 1650
+Wire Wire Line
+	3350 1650 6800 1650
+Wire Wire Line
+	2600 1650 3350 1650
+Connection ~ 3350 1650
+Wire Wire Line
+	3350 2400 3350 1650
+Wire Wire Line
+	8700 1650 8700 3950
+$Comp
+L Device:R R9
+U 1 1 5C215203
+P 4950 5800
+F 0 "R9" V 5030 5800 50  0000 C CNN
+F 1 "4K7" V 4950 5800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4880 5800 50  0001 C CNN
+F 3 "" H 4950 5800 50  0001 C CNN
+	1    4950 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C21529B
+P 4950 5450
+F 0 "R3" V 5030 5450 50  0000 C CNN
+F 1 "4K7" V 4950 5450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4880 5450 50  0001 C CNN
+F 3 "" H 4950 5450 50  0001 C CNN
+	1    4950 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 5450 6300 5450
+Wire Wire Line
+	5500 4800 5500 5200
+Wire Wire Line
+	4950 5200 5500 5200
+Connection ~ 5500 5200
+Wire Wire Line
+	5500 5200 5500 5450
+Wire Wire Line
+	4950 5300 4950 5200
+Connection ~ 4950 5200
+Wire Wire Line
+	4950 5600 4950 5650
+$Comp
+L Diode:BAT86 D5
+U 1 1 5C238A75
+P 4950 1150
+F 0 "D5" H 4950 1250 50  0000 C CNN
+F 1 "BAT86" H 4950 1050 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4950 975 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/BAT86.pdf" H 4950 1150 50  0001 C CNN
+	1    4950 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:BAT86 D6
+U 1 1 5C238B5E
+P 6000 2050
+F 0 "D6" H 6000 2150 50  0000 C CNN
+F 1 "BAT86" H 6000 1950 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6000 1875 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/BAT86.pdf" H 6000 2050 50  0001 C CNN
+	1    6000 2050
+	-1   0    0    1   
+$EndComp
+Text Notes 3550 2600 0    50   ~ 0
+THE Vf OF THIS LED WILL AFFECT\nTHE BASE VOLTAGE OF Q1
+Wire Wire Line
+	9500 1650 9500 4250
+Wire Wire Line
+	7350 2450 7350 2350
+Connection ~ 7350 2350
+Wire Wire Line
+	7350 2350 7850 2350
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 5C2684C7
+P 3350 5400
+F 0 "RV1" V 3175 5400 50  0000 C CNN
+F 1 "R_POT_TRIM" V 3250 5400 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical" H 3350 5400 50  0001 C CNN
+F 3 "~" H 3350 5400 50  0001 C CNN
+	1    3350 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 5550 3350 5600
 $EndSCHEMATC

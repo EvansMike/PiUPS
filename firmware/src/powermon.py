@@ -23,7 +23,7 @@ def signal_power_change_handler(pin):
     global p
     global t_shutdown
     #p.start(50) # Power saving, 50%, for relay hold on
-    # Loop for 30s then check if the power is still off
+    # Loop for POWER_WAIT seconds then check if the power is still off
     if GPIO.input(22) == 1 and not t_shutdown:
         os.system("logger Power lost")
         t_shutdown = time.time() + POWER_WAIT
