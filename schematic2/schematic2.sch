@@ -654,8 +654,6 @@ F 3 "" H -2450 2650 50  0000 C CNN
 	1    -2450 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5850 3100 5950 3100
 $Comp
 L Mikes:buck U1
 U 1 1 5B498832
@@ -815,26 +813,6 @@ F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 850 1710 50  0001 C CNN
 F 3 "~" H 850 1710 50  0001 C CNN
 	1    800  1750
 	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6150 2800 6150 1350
-Wire Wire Line
-	6150 1350 4400 1350
-Wire Wire Line
-	4400 1350 4400 1650
-Connection ~ 4400 1650
-Wire Wire Line
-	4400 1650 4650 1650
-$Comp
-L Device:Q_PMOS_GDS Q2
-U 1 1 5F0952D9
-P 6150 3000
-F 0 "Q2" V 6399 2797 50  0000 L CNN
-F 1 "DMP1045U" V 6490 2797 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6350 3100 50  0001 C CNN
-F 3 "~" H 6150 3000 50  0001 C CNN
-	1    6150 3000
-	0    -1   1    0   
 $EndComp
 $Comp
 L Regulator_Linear:LM317_SOT-223 U?
@@ -1131,12 +1109,8 @@ $EndComp
 Wire Wire Line
 	4150 3100 4150 3050
 Wire Wire Line
-	6350 3100 6700 3100
-Wire Wire Line
 	4950 1650 6300 1650
 Connection ~ 2650 1650
-Wire Wire Line
-	2650 1650 4400 1650
 $Comp
 L Diode:1N4001 D15
 U 1 1 5F3DEBA7
@@ -1256,4 +1230,8 @@ Wire Wire Line
 Connection ~ 4450 3550
 Wire Wire Line
 	4450 3550 4800 3550
+Wire Wire Line
+	5850 3100 6700 3100
+Wire Wire Line
+	2650 1650 4650 1650
 $EndSCHEMATC
