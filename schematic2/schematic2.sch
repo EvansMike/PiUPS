@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "LiPo Pi UPS"
-Date "2020-06-03"
-Rev "2 DEV"
+Date "2021-08-11"
+Rev "3"
 Comp "MILLSTREAM COMPUTING"
 Comment1 ""
 Comment2 ""
@@ -1199,12 +1199,6 @@ Wire Notes Line
 	4950 1950 5900 1950
 Wire Notes Line
 	3350 3900 3350 6200
-Wire Notes Line
-	3350 6200 9150 6200
-Wire Notes Line
-	9150 6200 9150 3900
-Wire Notes Line
-	9150 3900 3350 3900
 Text Notes 3400 4000 0    50   ~ 0
 Power Fail Detection
 Wire Notes Line
@@ -1213,8 +1207,6 @@ Wire Notes Line
 	4350 4050 4350 3900
 Wire Notes Line
 	6000 1500 6000 3450
-Wire Notes Line
-	6000 3450 9300 3450
 Wire Notes Line
 	9300 3450 9300 1500
 Wire Notes Line
@@ -1234,4 +1226,65 @@ Wire Wire Line
 	5850 3100 6700 3100
 Wire Wire Line
 	2650 1650 4650 1650
+Wire Notes Line
+	3350 3900 7100 3900
+Wire Notes Line
+	7100 3900 7100 6200
+Wire Notes Line
+	7100 6200 3350 6200
+Wire Notes Line
+	6000 3450 7250 3450
+Wire Notes Line
+	7250 3450 7250 4950
+Wire Notes Line
+	7250 4950 9900 4950
+Wire Notes Line
+	9900 4950 9900 3450
+Wire Notes Line
+	9900 3450 9300 3450
+Text GLabel -4300 3300 0    50   Input ~ 0
+GPIO17
+Text GLabel 10000 5550 2    50   Input ~ 0
+GPIO17
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 611A8E2F
+P 9250 5650
+F 0 "J2" H 9168 5325 50  0000 C CNN
+F 1 "Conn_01x02" H 9168 5416 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9250 5650 50  0001 C CNN
+F 3 "~" H 9250 5650 50  0001 C CNN
+	1    9250 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 611A94D4
+P 9450 5850
+F 0 "#PWR0104" H 9450 5600 50  0001 C CNN
+F 1 "GND" H 9450 5700 50  0000 C CNN
+F 2 "" H 9450 5850 50  0001 C CNN
+F 3 "" H 9450 5850 50  0001 C CNN
+	1    9450 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 611A9DB8
+P 9750 5550
+F 0 "R16" V 9830 5550 50  0000 C CNN
+F 1 "1K" V 9750 5550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9680 5550 50  0001 C CNN
+F 3 "" H 9750 5550 50  0001 C CNN
+	1    9750 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9450 5550 9600 5550
+Wire Wire Line
+	9900 5550 10000 5550
+Wire Wire Line
+	9450 5650 9450 5850
+Text Notes 9600 5850 0    50   ~ 0
+POTENTIALLY USEFUL\nBUTTON ? :)
 $EndSCHEMATC

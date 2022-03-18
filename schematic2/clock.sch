@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "Raspberry Pi UPS"
-Date "2020-06-03"
-Rev "1_B"
-Comp "MIllstream Computing"
+Title "LiPo Pi UPS"
+Date "2021-08-11"
+Rev "3"
+Comp "MILLSTREAM COMPUTING"
 Comment1 ""
 Comment2 ""
 Comment3 ""
