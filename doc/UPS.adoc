@@ -6,17 +6,32 @@ This is not a microcoltroller controlled version, in part because of the shortag
 
 Ensure that the cells are charged before fitting, the charge current is very low, 50mA, and a charge from flat will take a very long time.
 
+
+
 ==Operation
 
 The LiPo packs used in this PCB only need about enough capacity to power the Pi for a few minutes, but that is all we need to get a safe shut-down when the main power is removed.
 
 The "powered" signal is held LOW by Q1 being turned on by the main power.
 When power is lost the Battery power is sufficient to power the pi but the voltage is too low to hold Q1 ON so the voltage on the collector rises, turning ON Q3.
-This signals the Pi firmware that it is running on battereis and should shut down after a short period.
+This signals the Pi firmware that it is running on batteries and should shut down after a short period.
 The short wait is to allow for very short glitches in the power.
 
-The voltage at the base of Q1 is determined by D2 a 3V zener and the voltage divider R4-R5.
-The small difference between the 5V power supply and battery means that getting the base voltage correct is critical to the operation of the device.
-The 3V zener should be considered to be a reliable device, the forward voltage of the LED may vary by device.
-It would be possible to adjust the base voltage with a pot, perhaps replacing R4 and R5 with a 10K multi turn cermet trimmer.
-Or and additional 500R trimmer if a single pot is too course an adjustment.
+The voltage at the base of Q1 is determined by D3 a 5V1 zener and the voltage divider R1-R2.
+The 5V1 zener should be considered to be a reliable device, the forward voltage of the LED may vary by device.
+
+
+
+== Charging
+
+The original reference trickle charges NiMh batteries.
+Converting this to LiPo presents some challenges in that LiPo battereies have a completely different charging profile.
+LiPo's should normally be charged at 1/100 their capacity in mAh.
+For the cells used here, 120mAh, we should charge at a max 120mA.
+The charge current is set with R3, (6r6) which gives a current of 80mA.
+The voltage across R6 controls the base voltage of Q5 which in turn limits the current.
+The current through R6 is the set charging current.
+If current rises, so does the base voltage, which tursn on Q5 and lowers the ADJ voltage on U3.
+This limits the current through U3 and so the feedback loop regulates the current.
+The max voltage is set with R5, R14+R15 which should give a voltage of 8V.
+Charging stops at 8V even though the cells have protection that would limit this anyway.
