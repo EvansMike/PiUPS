@@ -1,0 +1,52 @@
+
+[width="100%"]
+|=======
+|*PCB RELEASE FORM*     |*HR Form #* 101
+|*Project Title:* Pi UPS    |*Released By:* Mike Evans
+|*Release Title:* Pi UPS    |*Git Commit:*  e995b20
+|*Release Date:* 2022-03-18     |*Git Tag:* ORDER_PLACED
+|*Release Version:* V3  |
+|=======
+[width="100%"]
+|=======
+|*File Name(s):*
+|*Release Notes:*
+
+Charge current is set to 80mA to 8.2V across both cells.
+
+Ensure both batteries are fully charged before connecting. If one cuts off the other will not get its full charge.  This is mostly OK for the purposes of this board. Cells should have over and under-voltage protection circuits. Yes the circuit could be improved.
+
+GREEN LED = POWER ON. Normal power should be 12V or maybe 9V
+
+ORANGE LED = UPS ACTIVE
+
+RED LED = POWER LOSS. When power supply dips below 7V.
+
+Small ORANGE LED = LiPo charging
+
+Take care to make the wait time it the python script appropriate to whatever batteries are used.
+In my use case this is very short and merely enables a clean shut-down of the Pi.
+In the order ten seconds rather than minutes.
+
+|*TODO, Known Errors and Fixes:*
+
+C2 and C3 are the wrong footprint.
+
+Green LED is missing it's "G" label.
+
+D3 is now a 5V1 zener
+
+R15 is now 310R
+
+Can R6 be a 10K? Simpler to source. A = Yes it can.
+
+I really should replace the relay with a MOSFET.
+
+Is D14 really required? A = Yes as it turns out.
+
+Change D9 to 1N4148 as 1N4001 leak too much back current and drain the batteries.
+See also D6 and D13 on battery over voltage circuit.
+
+
+|Signature & Date:
+|=======
