@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 2 2
 Title "LiPo Pi UPS"
 Date "2021-08-11"
-Rev "3"
+Rev "4"
 Comp "MILLSTREAM COMPUTING"
 Comment1 ""
 Comment2 ""
@@ -55,7 +55,7 @@ AR Path="/5B4BA970" Ref="C?"  Part="1"
 AR Path="/5B4BA298/5B4BA970" Ref="C2"  Part="1" 
 F 0 "C2" H 3650 4250 50  0000 L CNN
 F 1 "100nF" H 3600 4050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3800 4150 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3800 4150 50  0001 C CNN
 F 3 "~" H 3800 4150 50  0001 C CNN
 	1    3800 4150
 	1    0    0    -1  
