@@ -2,9 +2,16 @@
 
 This based on the UPS documented at http://homediyelectronics.com/projects/raspberrypi/ups/ but uses only 2 LiPo cells
 
-This is not a microcoltroller controlled version, in part because of the shortage of AtTiny86 controllers.
+This is not a microcoltroller controlled version, in part because of the shortage of AtTiny85 controllers.
 
 Ensure that the cells are charged before fitting, the charge current is very low, 50mA, and a charge from flat will take a very long time.
+
+
+
+== Building Version 3
+
+Refer to release note for component changes.
+TODO
 
 
 
@@ -35,3 +42,6 @@ If current rises, so does the base voltage, which tursn on Q5 and lowers the ADJ
 This limits the current through U3 and so the feedback loop regulates the current.
 The max voltage is set with R5, R14+R15 which should give a voltage of 8V.
 Charging stops at 8V even though the cells have protection that would limit this anyway.
+
+The zener and serial diode across each cell should permit the other cell to receive charge when the adjacent cell's voltage limit circuit has cut off.
+Otherwise once one cell has cut off the other cannot charge further and so my lead to cell voltage imbalance.
