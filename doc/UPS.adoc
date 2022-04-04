@@ -1,17 +1,23 @@
 = Improved UPS for Raspberry Pi
 
-This based on the UPS documented at http://homediyelectronics.com/projects/raspberrypi/ups/ but uses only 2 LiPo cells
+This based on the UPS documented at http://homediyelectronics.com/projects/raspberrypi/ups/ but now uses only 2 LiPo cells
 
-This is not a microcoltroller controlled version, in part because of the shortage of AtTiny85 controllers.
+This is not a microcontroller controlled version, only in part because of the shortage of AtTiny85 controllers.
 
-Ensure that the cells are charged before fitting, the charge current is very low, 50mA, and a charge from flat will take a very long time.
+Ensure that the cells are charged before fitting, the charge current is 80mA, and a charge from flat will take a long time.
 
 
 
 == Building Version 3
 
 Refer to release note for component changes.
-TODO
+
+- Solder D7 before D5 as this blocks access.
+- Solder pin 1 to one of the relay holes
+- Use the relay holes to fit a 10K resistor underneath and diagonally and leave one log long to connect to the MOSFET.
+- Before fitting the buck converter on the bottom side and some Kapton tape the the are so add some more insulation.
+- Use a leaded 1n4148 for D9 by bending the leads back to fit on the SMD pads.
+- Not all of the 40 pin header pins are used. Populate as appropriate with SIL headers.
 
 
 
@@ -29,7 +35,7 @@ The 5V1 zener should be considered to be a reliable device, the forward voltage 
 
 
 
-== Charging
+== Charging Circuit Operation
 
 The original reference trickle charges NiMh batteries.
 Converting this to LiPo presents some challenges in that LiPo battereies have a completely different charging profile.
