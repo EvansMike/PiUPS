@@ -20,18 +20,20 @@ Refer to release note for component changes.
 - Replace R14, R15 with a single 2K7 resistor.
 - Don't fit the Molex connectors for the batteries unless you really want to.
 - Solder D7 before D5 as this blocks access.
-- Solder pin 1,2 and 3 to the relay hole, second from the right top row. Remove resist from the vertical part of the track to enable this.
-- Solder the 10K pull-up underside from that pin to the bottom right relay pin-hole and leave this lead uncut.
-- Bend that lead to pin 4 for the MOSFET.
-- Wire pin 5,6,7 an 8 from the MOSFET to the buck converter input. Leave this wire long to got through teh buck-converter board. Use a cut off resistor lead for this.
-- If needed, super glue the MOSFET to the board.
-- The orientation of zener diodes D12 and D4 is missing off the board. D12 stripe up, D4 stripe down when the 40 way connector is up.
-- Use the relay holes to fit a 10K resistor underneath and diagonally and leave one log long to connect to the MOSFET.
 - Before fitting the buck converter on the bottom side add some Kapton-like tape the the area to add some more insulation.
 - Use a leaded 1n4148 for D9 by bending the leads back to fit on the SMD pads.
 - Not all of the 40 pin header pins are used. Populate as appropriate with SIL headers.
 - Battery connectors are unmarked, (FFS). Connect both batteries black(-) down, red(+) up, relative to board bottom edge.
+- The orientation of zener diodes D12 and D4 is missing off the board. D12 stripe up, D4 stripe down when the 40 way connector is up.
 
+MOSFET mod
+
+- Solder pin 1,2 and 3 to the relay hole, second from the right top row. Remove resist from the vertical part of the track to enable this.
+- Solder the 10K pull-up underside from that pin to the bottom right relay pin-hole and leave this lead uncut.
+- Bend that lead to pin 4 for the MOSFET.
+- Wire pin 5,6,7 an 8 from the MOSFET to the buck converter input. Leave this wire long to go through th buck-converter board. Use a cut off resistor lead for this.
+- If needed, super glue the MOSFET to the board.
+- Use the relay holes to fit a 10K resistor underneath and diagonally and leave one leg long to connect to the MOSFET.
 
 
 == Operation
